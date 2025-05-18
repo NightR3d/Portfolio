@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio - Projets</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        nav { background: #333; padding: 10px; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; }
+        section { padding: 20px; }
+        .project { margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="../../index.html">Accueil</a>
+        <a href="projects.html">Projets</a>
+    </nav>
+
+    <section>
+        <h1>Mes Projets</h1>
+        <div id="content">
+            <p>Cliquez pour charger les projets.</p>
+            <button onclick="loadProjects()">Charger les projets</button>
+        </div>
+    </section>
+
+    <script>
+        function loadProjects() {
+            const projects = [
+                { title: 'Projet 1', description: 'Description du projet 1.' },
+                { title: 'Projet 2', description: 'Description du projet 2.' }
+            ];
+            let projectContent = '';
+            projects.forEach(proj => {
+                projectContent += `<div class="project"><h2>${proj.title}</h2><p>${proj.description}</p></div>`;
+            });
+            document.getElementById('content').innerHTML = projectContent;
+        }
+    </script>
+</body>
+</html>
