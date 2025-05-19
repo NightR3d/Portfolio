@@ -1,0 +1,25 @@
+{
+    "nav": {
+        "home": "Home",
+        "project": "Projects"
+    },
+    "index": {
+        "title": "My Portfolio",
+        "description": "Welcome on my portfolio. I am a developer passionate about creating innovative solutions."
+    },
+    "projects": {
+        "title": "My Projects",
+        "backButton": "Back",
+        "cpp": {
+            "title": "C++ Project"
+        },
+        "python": {
+            "title": "Python Project"
+        }
+    },
+    "footer": {
+        "contact": "Contact",
+        "github": "GitHub",
+        "linkedin": "LinkedIn"
+    }
+}

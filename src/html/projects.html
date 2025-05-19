@@ -4,27 +4,72 @@
     <meta charset="UTF-8">
     <title>Portfolio - Projets</title>
     <link rel="stylesheet" href="../css/project.css">
+    <script>
+        window.onload = function () {
+            const savedLang = localStorage.getItem('lang') || 'fr';
+            document.getElementById('langSelect').value = savedLang;
+            loadLanguage();
+        };
+    </script>
 </head>
 <body>
-    <nav>
-        <a href="../../index.html">Accueil</a>
-        <a href="projects.html">Projets</a>
+        <nav>
+        <select id="langSelect" onchange="loadLanguage()">
+            <option value="fr">Français</option>
+            <option value="en">English</option>
+        </select>
+        <a href="../../index.html" id="nav.home"></a>
+        <a href="projects.html" id="nav.project"></a>
     </nav>
 
     <section>
-        <h1>Mes Projets</h1>
+        <h1 id="projects.title"></h1>
         <div id="content">
-            <button onclick="loadProject('project1')">Projet 1</button>
-            <button onclick="loadProject('project2')">Projet 2</button>
+            <button onclick="loadProject('project1')" id="projects.cpp.title"></button>
+            <button onclick="loadProject('project2')" id= "projects.python.title"></button>
         </div>
     </section>
 
     <script>
+        function loadLanguage() {
+            const lang = document.getElementById('langSelect').value;
+            localStorage.setItem('lang', lang);
+            fetch(`../../tools/language/${lang}.json`)
+                .then(response => response.json())
+                .then(data => {
+                    // Navigation
+                    const navHome = document.getElementById('nav.home');
+                    if (navHome) navHome.textContent = data.nav.home;
+                    const navProject = document.getElementById('nav.project');
+                    if (navProject) navProject.textContent = data.nav.project;
+
+                    // Project page
+                    const projectTitle = document.getElementById('projects.title');
+                    if (projectTitle) projectTitle.textContent = data.projects.title;
+                    const cppBtn = document.getElementById('projects.cpp.title');
+                    if (cppBtn) cppBtn.textContent = data.projects.cpp.title;
+                    const pyBtn = document.getElementById('projects.python.title');
+                    if (pyBtn) pyBtn.textContent = data.projects.python.title;
+                    const backBtn = document.getElementById('projects.backButton');
+                    if (backBtn) backBtn.textContent = data.projects.backButton;
+
+                    // Footer
+                    const footerContact = document.getElementById('footer.contact');
+                    if (footerContact) footerContact.textContent = data.footer.contact;
+                    const footerGithub = document.getElementById('footer.github');
+                    if (footerGithub) footerGithub.textContent = data.footer.github;
+                    const footerLinkedIn = document.getElementById('footer.linkedin');
+                    if (footerLinkedIn) footerLinkedIn.textContent = data.footer.linkedin;
+                })
+                .catch(() => alert('Erreur de chargement de la langue'));
+        }
+
         function loadProject(projectName) {
             fetch(projectName + '.html')
                 .then(response => response.text())
                 .then(data => {
-                    document.getElementById('content').innerHTML = data + '<br><button class="back-button" onclick="showProjects()">Retour</button>';
+                    document.getElementById('content').innerHTML = data + '<br><button class="back-button" onclick="showProjects()" id="projects.backButton"></button>';
+                    loadLanguage();
                 })
                 .catch(() => {
                     document.getElementById('content').innerHTML = '<p>Projet non trouvé.</p>';
@@ -33,10 +78,18 @@
 
         function showProjects() {
             document.getElementById('content').innerHTML = `
-                <button onclick="loadProject('project1')">Projet 1</button>
-                <button onclick="loadProject('project2')">Projet 2</button>
+                <button onclick="loadProject('project1')" id="projects.cpp.title"></button>
+                <button onclick="loadProject('project2')" id="projects.python.title"></button>
             `;
+            loadLanguage();
         }
     </script>
+
+    <footer>
+        <a href="src/html/contact.html" id="footer.contact"></a>
+        <a href="https://github.com/NightR3d" id="footer.github"></a>
+        <a href="https://www.linkedin.com/in/lucas-legardeur" id="footer.linkedin"></a>
+        <span>&copy; 2025 Mon Portfolio</span>
+    </footer>
 </body>
 </html>

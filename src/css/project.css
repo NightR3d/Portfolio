@@ -2,5 +2,60 @@ body { font-family: Arial, sans-serif; }
 nav { background: #333; padding: 10px; }
 nav a { color: white; margin: 0 15px; text-decoration: none; }
 section { padding: 20px; }
-    .project { margin: 10px 0; }
-    .back-button { margin: 20px 0; }
+.project { margin: 10px 0; }
+.back-button { margin: 20px 0; }
+footer {
+    background: #333;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+footer a {
+    color: white;
+    margin: 0;
+    text-decoration: none;
+}
+footer p {
+    color: white;
+    margin: 0;
+    text-decoration: none;
+    display: inline;
+}
+footer span {
+    color: #aaa;
+    margin-left: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    nav {
+        padding: 8px 4px;
+    }
+    nav a {
+        display: block;
+        margin: 8px 0;
+        font-size: 1.1em;
+    }
+    section {
+        padding: 12px;
+    }
+    .project {
+        margin: 16px 0;
+    }
+    .back-button {
+        margin: 24px 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    footer {
+        font-size: 0.95em;
+        padding-bottom: 40px;
+    }
+}
