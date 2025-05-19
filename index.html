@@ -3,12 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Portfolio - Accueil</title>
-    <style>
-        body { font-family: Arial, sans-serif; }
-        nav { background: #333; padding: 10px; }
-        nav a { color: white; margin: 0 15px; text-decoration: none; }
-        section { padding: 20px; }
-    </style>
+    <link rel="stylesheet" href="src/css/index.css">
 </head>
 <body>
     <nav>
@@ -22,50 +17,3 @@
     </section>
 </body>
 </html>
-
-<!--
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Portfolio Hybride</title>
-    
-    <link rel="stylesheet" href="./src/css/styles.css">
-    
-    <style>
-        body { font-family: Arial, sans-serif; scroll-behavior: smooth; }
-        nav { background: #333; padding: 10px; }
-        nav a { color: white; margin: 0 15px; text-decoration: none; }
-        section { padding: 20px; }
-        #content { padding: 20px; }
-        .project { margin: 20px 0; }
-    </style>
-</head>
-<body>
-    <nav>
-        <a href="home.html">Accueil</a>
-        <a href="skills.html">Compétences</a>
-        <a href="projects.html" onclick="loadPage('projects.html'); return false;">Projets</a>
-    </nav>
-
-    <div id="content">
-        <h1>Bienvenue sur le Portfolio</h1>
-        <p>Sélectionnez une page dans la navigation pour voir le contenu.</p>
-    </div>
-
-    <script>
-        function loadPage(page) {
-            fetch(page)
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('content').innerHTML = data;
-                })
-                .catch(() => {
-                    document.getElementById('content').innerHTML = '<p>Page non trouvée.</p>';
-                });
-        }
-    </script>
-</body>
-</html>
-
--->

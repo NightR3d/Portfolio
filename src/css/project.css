@@ -1,0 +1,6 @@
+body { font-family: Arial, sans-serif; }
+nav { background: #333; padding: 10px; }
+nav a { color: white; margin: 0 15px; text-decoration: none; }
+section { padding: 20px; }
+    .project { margin: 10px 0; }
+    .back-button { margin: 20px 0; }

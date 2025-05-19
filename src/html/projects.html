@@ -3,13 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Portfolio - Projets</title>
-    <style>
-        body { font-family: Arial, sans-serif; }
-        nav { background: #333; padding: 10px; }
-        nav a { color: white; margin: 0 15px; text-decoration: none; }
-        section { padding: 20px; }
-        .project { margin: 10px 0; }
-    </style>
+    <link rel="stylesheet" href="../css/project.css">
 </head>
 <body>
     <nav>
@@ -20,22 +14,28 @@
     <section>
         <h1>Mes Projets</h1>
         <div id="content">
-            <p>Cliquez pour charger les projets.</p>
-            <button onclick="loadProjects()">Charger les projets</button>
+            <button onclick="loadProject('project1')">Projet 1</button>
+            <button onclick="loadProject('project2')">Projet 2</button>
         </div>
     </section>
 
     <script>
-        function loadProjects() {
-            const projects = [
-                { title: 'Projet 1', description: 'Description du projet 1.' },
-                { title: 'Projet 2', description: 'Description du projet 2.' }
-            ];
-            let projectContent = '';
-            projects.forEach(proj => {
-                projectContent += `<div class="project"><h2>${proj.title}</h2><p>${proj.description}</p></div>`;
-            });
-            document.getElementById('content').innerHTML = projectContent;
+        function loadProject(projectName) {
+            fetch(projectName + '.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('content').innerHTML = data + '<br><button class="back-button" onclick="showProjects()">Retour</button>';
+                })
+                .catch(() => {
+                    document.getElementById('content').innerHTML = '<p>Projet non trouvé.</p>';
+                });
+        }
+
+        function showProjects() {
+            document.getElementById('content').innerHTML = `
+                <button onclick="loadProject('project1')">Projet 1</button>
+                <button onclick="loadProject('project2')">Projet 2</button>
+            `;
         }
     </script>
 </body>
