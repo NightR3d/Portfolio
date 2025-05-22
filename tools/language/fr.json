@@ -4,8 +4,43 @@
         "project": "Projets"
     },
     "index": {
-        "title": "Mon Portfolio",
-        "description": "Bienvenue sur mon portfolio. Je suis un développeur passionné par la création de solutions innovantes."
+        "title": "Bienvenue sur mon Portfolio",
+        "subtitle": "Développeur",
+        "profile": {
+            "title": "À propos de moi",
+            "description": "En tant que développeur, j’ai acquis des compétences techniques dans plusieurs langages de programmation, tels que le C, C++, Javascript & Typescript avec le framework React. J’ai également acquis des connaissances sur la création d’entreprise, ainsi que l’habileté à pitcher un projet lors de mes expériences en startup. De plus, en tant qu’entraîneur et membre actif du comité sportif d’un club de badminton, j’ai développé des compétences en gestion, encadrement et organisation d’événements sportifs."
+        },
+        "experience": {
+            "title": "Expériences",
+            "delmonicos": {
+                "title": "Delmonicos - Développeur | React / Node JS",
+                "date": "Juillet 2021 - Novembre 2023",
+                "description": "Delmonicos développe un écosystème pour faciliter l'accès aux bornes de recharge pour véhicules électriques. En tant que membre d'une équipe gérant l'intégration de l'application web, j'ai participé au développement de l'intégration back-end avec le protocole OCPI et j'ai développé l’interface front-end de l’application. J'ai également été impliqué dans les décisions créatives relatives à la partie frontale. Et j'ai exposé deux fois au CES."
+            },
+            "iel": {
+                "title": "IEL Services - Développeur | React Native",
+                "date": "Octobre 2019 - juin 2021",
+                "description": "En tant que chef de ce projet, j'ai travaillé sur le développement de l'application mobile de gestion du CRM en React Native."
+            },
+            "vivoka": {
+                "title": "Vivoka - Développeur | C++",
+                "date": "Juillet 2018 - Décembre 2018",
+                "description": "Dans le cadre du développement du module KNX pour le système domotique Zac. J'ai intégré l'API KNX pour manipuler la lumière, les volets, les radiateurs, ... Avec le langage C++."
+            }
+        },
+        "formation": {
+            "title": "Formation",
+            "subtitle": "EPITECH LYON (Master) - [2017 - 2022]",
+            "description": "J'ai obtenu mon diplôme en informatique de l'Université EPITECH, où j'ai acquis des compétences solides en développement logiciel, en gestion de bases de données et en conception d'interfaces utilisateur."
+        },
+        "skills": {
+            "title": "Compétences",
+            "description": "Je maîtrise plusieurs langages de programmation, notamment JavaScript, Python et C++. J'ai également de l'expérience avec des frameworks comme React, Vue.js et Node.js."
+        },
+        "languages": {
+            "title": "Langues",
+            "description": "Je parle couramment le français et l'anglais, et j'ai des connaissances de base en espagnol."
+        }
     },
     "projects": {
         "title": "Mes Projets",

@@ -24,7 +24,31 @@
 
     <section>
         <h1 id="index.title"></h1>
-        <p id="index.description"></p>
+        <h3 id="index.subtitle"></h3>
+    </section>
+
+    <section>
+        <h2 id="index.profile.title"></h2>
+        <p id="index.profile.description"></p>
+    </section>
+
+    <section>
+        <h2 id="index.experience.delmonicos.title"></h2>
+        <h3 id="index.experience.delmonicos.date"></h3>
+        <p id="index.experience.delmonicos.description"></p>
+
+    </section>
+
+    <section>
+        <h2 id="index.experience.iel.title"></h2>
+        <h3 id="index.experience.iel.date"></h3>
+        <p id="index.experience.iel.description"></p>
+    </section>
+
+    <section>
+        <h2 id="index.experience.vivoka.title"></h2>
+        <h3 id="index.experience.vivoka.date"></h3>
+        <p id="index.experience.vivoka.description"></p>
     </section>
     
     <footer>
@@ -33,6 +57,7 @@
         <a href="https://www.linkedin.com/in/lucas-legardeur" id="footer.linkedin"></a>
         <span>&copy; 2025 Mon Portfolio</span>
     </footer>
+
     <script>
         function loadLanguage() {
             const lang = document.getElementById('langSelect').value;
@@ -49,8 +74,32 @@
                     // Index page
                     const indexTitle = document.getElementById('index.title');
                     if (indexTitle) indexTitle.textContent = data.index.title;
-                    const description = document.getElementById('index.description');
-                    if (description) description.textContent = data.index.description;
+                    const indexSubtitle = document.getElementById('index.subtitle');
+                    if (indexSubtitle) indexSubtitle.textContent = data.index.subtitle;
+                    const indexProfileTitle = document.getElementById('index.profile.title');
+                    if (indexProfileTitle) indexProfileTitle.textContent = data.index.profile.title;
+                    const indexProfileDescription = document.getElementById('index.profile.description');
+                    if (indexProfileDescription) indexProfileDescription.textContent = data.index.profile.description;
+                    const indexExperienceTitle = document.getElementById('index.experience.title');
+                    if (indexExperienceTitle) indexExperienceTitle.textContent = data.index.experience.title;
+                    const indexExperienceDelmonicosTitle = document.getElementById('index.experience.delmonicos.title');
+                    if (indexExperienceDelmonicosTitle) indexExperienceDelmonicosTitle.textContent = data.index.experience.delmonicos.title;
+                    const indexExperienceDelmonicosDate = document.getElementById('index.experience.delmonicos.date');
+                    if (indexExperienceDelmonicosDate) indexExperienceDelmonicosDate.textContent = data.index.experience.delmonicos.date;
+                    const indexExperienceDelmonicosDescription = document.getElementById('index.experience.delmonicos.description');
+                    if (indexExperienceDelmonicosDescription) indexExperienceDelmonicosDescription.textContent = data.index.experience.delmonicos.description;
+                    const indexExperienceIelTitle = document.getElementById('index.experience.iel.title');
+                    if (indexExperienceIelTitle) indexExperienceIelTitle.textContent = data.index.experience.iel.title;
+                    const indexExperienceIelDate = document.getElementById('index.experience.iel.date');
+                    if (indexExperienceIelDate) indexExperienceIelDate.textContent = data.index.experience.iel.date;
+                    const indexExperienceIelDescription = document.getElementById('index.experience.iel.description');
+                    if (indexExperienceIelDescription) indexExperienceIelDescription.textContent = data.index.experience.iel.description;
+                    const indexExperienceVivokaTitle = document.getElementById('index.experience.vivoka.title');
+                    if (indexExperienceVivokaTitle) indexExperienceVivokaTitle.textContent = data.index.experience.vivoka.title;
+                    const indexExperienceVivokeDate = document.getElementById('index.experience.vivoka.date');
+                    if (indexExperienceVivokeDate) indexExperienceVivokeDate.textContent = data.index.experience.vivoka.date;
+                    const indexExperienceVivokaDescription = document.getElementById('index.experience.vivoka.description');
+                    if (indexExperienceVivokaDescription) indexExperienceVivokaDescription.textContent = data.index.experience.vivoka.description;
 
                     // Footer
                     const footerContact = document.getElementById('footer.contact');
