@@ -36,7 +36,6 @@
         <h2 id="index.experience.delmonicos.title"></h2>
         <h3 id="index.experience.delmonicos.date"></h3>
         <p id="index.experience.delmonicos.description"></p>
-
     </section>
 
     <section>
@@ -49,6 +48,32 @@
         <h2 id="index.experience.vivoka.title"></h2>
         <h3 id="index.experience.vivoka.date"></h3>
         <p id="index.experience.vivoka.description"></p>
+    </section>
+
+    <section>
+        <h2 id="index.formation.title"></h2>
+        <h3 id="index.formation.subtitle"></h3>
+        <p id="index.formation.description"></p>
+    </section>
+
+    <section>
+        <h2 id="index.skills.title"></h2>
+        <p id="index.skills.description"></p>
+        <ul>
+            <li>JavaScript</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>React</li>
+            <li>Node.js</li>
+            <li>Python</li>
+            <li>C</li>
+            <li>C++</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2 id="index.languages.title"></h2>
+        <p id="index.languages.description"></p>
     </section>
     
     <footer>
@@ -100,6 +125,20 @@
                     if (indexExperienceVivokeDate) indexExperienceVivokeDate.textContent = data.index.experience.vivoka.date;
                     const indexExperienceVivokaDescription = document.getElementById('index.experience.vivoka.description');
                     if (indexExperienceVivokaDescription) indexExperienceVivokaDescription.textContent = data.index.experience.vivoka.description;
+                    const indexFormationTitle = document.getElementById('index.formation.title');
+                    if (indexFormationTitle) indexFormationTitle.textContent = data.index.formation.title;
+                    const indexFormationSubtitle = document.getElementById('index.formation.subtitle');
+                    if (indexFormationSubtitle) indexFormationSubtitle.textContent = data.index.formation.subtitle;
+                    const indexFormationDescription = document.getElementById('index.formation.description');
+                    if (indexFormationDescription) indexFormationDescription.textContent = data.index.formation.description;
+                    const indexSkillsTitle = document.getElementById('index.skills.title');
+                    if (indexSkillsTitle) indexSkillsTitle.textContent = data.index.skills.title;
+                    const indexSkillsDescription = document.getElementById('index.skills.description');
+                    if (indexSkillsDescription) indexSkillsDescription.textContent = data.index.skills.description;
+                    const indexLanguagesTitle = document.getElementById('index.languages.title');
+                    if (indexLanguagesTitle) indexLanguagesTitle.textContent = data.index.languages.title;
+                    const indexLanguagesDescription = document.getElementById('index.languages.description');
+                    if (indexLanguagesDescription) indexLanguagesDescription.textContent = data.index.languages.description;
 
                     // Footer
                     const footerContact = document.getElementById('footer.contact');

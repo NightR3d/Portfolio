@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio - Accueil</title>
+    <link rel="stylesheet" href="../css/contact.css">
+        <script>
+        window.onload = function () {
+            const savedLang = localStorage.getItem('lang') || 'fr';
+            document.getElementById('langSelect').value = savedLang;
+            loadLanguage();
+        };
+    </script>
+</head>
+<body>
+    <nav>
+        <select id="langSelect" onchange="loadLanguage()">
+            <option value="fr">Français</option>
+            <option value="en">English</option>
+        </select>
+        <a href="../../index.html" id="nav.home"></a>
+        <a href="../html/projects.html" id="nav.project"></a>
+    </nav>
+
+    <section>
+        <h1 id="index.title"></h1>
+        <h3 id="index.subtitle"></h3>
+    </section>
+    
+    <footer>
+        <p id="footer.contact"></p>
+        <a href="https://github.com/NightR3d" id="footer.github"></a>
+        <a href="https://www.linkedin.com/in/lucas-legardeur" id="footer.linkedin"></a>
+        <span>&copy; 2025 Mon Portfolio</span>
+    </footer>
+
+    <script>
+        function loadLanguage() {
+            const lang = document.getElementById('langSelect').value;
+            localStorage.setItem('lang', lang);
+            fetch(`../../tools/language/${lang}.json`)
+                .then(response => response.json())
+                .then(data => {
+                    // Navigation
+                    const navHome = document.getElementById('nav.home');
+                    if (navHome) navHome.textContent = data.nav.home;
+                    const navProject = document.getElementById('nav.project');
+                    if (navProject) navProject.textContent = data.nav.project;
+
+                    // Contact page
+
+                    // Footer
+                    const footerContact = document.getElementById('footer.contact');
+                    if (footerContact) footerContact.textContent = data.footer.contact;
+                    const footerGithub = document.getElementById('footer.github');
+                    if (footerGithub) footerGithub.textContent = data.footer.github;
+                    const footerLinkedIn = document.getElementById('footer.linkedin');
+                    if (footerLinkedIn) footerLinkedIn.textContent = data.footer.linkedin;
+                })
+                .catch(() => alert('Erreur de chargement de la langue'));
+        }
+    </script>
+</body>
+</html>

@@ -35,11 +35,11 @@
         },
         "skills": {
             "title": "Compétences",
-            "description": "Je maîtrise plusieurs langages de programmation, notamment JavaScript, Python et C++. J'ai également de l'expérience avec des frameworks comme React, Vue.js et Node.js."
+            "description": "Je maîtrise plusieurs langages de programmation et framework, tel que :"
         },
         "languages": {
             "title": "Langues",
-            "description": "Je parle couramment le français et l'anglais, et j'ai des connaissances de base en espagnol."
+            "description": "Je parle couramment le français qui est ma langue maternelle, je parle anglais de manière professionnelle et j'ai des connaissances de base en allemand."
         }
     },
     "projects": {

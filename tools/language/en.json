@@ -4,8 +4,44 @@
         "project": "Projects"
     },
     "index": {
-        "title": "My Portfolio",
-        "description": "Welcome on my portfolio. I am a developer passionate about creating innovative solutions."
+        "title": "Welcome to my Portfolio",
+        "subtitle": "Developer",
+        "profile": {
+            "title": "About Me",
+            "description": "As a developer, I have acquired technical skills in several programming languages, such as C, C++, Javascript & Typescript with the React framework. I have also gained knowledge about entrepreneurship, as well as the ability to pitch a project during my startup experiences. Additionally, as a coach and active member of the sports committee of a badminton club, I have developed skills in management, coaching, and organizing sporting events."
+        },
+        "experience": {
+            "title": "Experience",
+            "delmonicos": {
+                "title": "Delmonicos - Developer | React / Node JS",
+                "date": "July 2021 - November 2023",
+                "description": "Delmonicos is developing an ecosystem to facilitate access to charging stations for electric vehicles. As a member of a team managing the integration of the web application, I participated in the development of the back-end integration with the OCPI protocol and developed the front-end interface of the application. I was also involved in creative decisions related to the front end. And I have presented twice at CES."
+            },
+            "iel": {
+                "title": "IEL Services - Developer | React Native",
+                "date": "October 2019 - June 2021",
+                "description": "As the head of this project, I worked on developing the mobile application for CRM management in React Native."
+            },
+            "vivoka": {
+                "title": "Vivoka - Developer | C++",
+                "date": "July 2018 - December 2018",
+                "description": "As part of the development of the KNX module for the Zac home automation system. I integrated the KNX API to manipulate light, shutters, radiators, ... With C++ language."
+            }
+        },
+        "formation": {
+            "title": "Education",
+            "subtitle": "EPITECH LYON (Master) - [2017 - 2022]",
+            "description": "I obtained my computer science degree from EPITECH University, where I acquired solid skills in software development, database management, and user interface design."
+        },
+        "skills": {
+            "title": "Skills",
+            "description": "I master several programming languages and frameworks, such as :"
+
+        },
+        "languages": {
+            "title": "Languages",
+            "description": "I am fluent in French, which is my native language, I speak English professionally, and I have basic knowledge of German."
+        }
     },
     "projects": {
         "title": "My Projects",
